@@ -38,6 +38,16 @@
        width: 800px;
        margin-left: 350px;
     }
+    .animate {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+
+    .animate.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
   
     .project-wrapper {
       height: 400px;
@@ -47,7 +57,10 @@
       margin: 0 auto;
       padding: 2.5rem;
     }
-
+      .project-wrapper:hover {
+      transform: translateY(-8px);
+      transition: transform 0.4s ease;
+    }
     .project-image {
       width: 520px;
       border-radius: 0.75rem;
@@ -90,7 +103,14 @@
       background: #dee2e6;
       transform: translateX(-50%);
     }
+    .timeline-row .card {
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
 
+    .timeline-row .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
     .timeline-row {
       display: flex;
       justify-content: space-between;
@@ -182,8 +202,8 @@
       </nav>
     </header>
 
-    <main class="pt-5 mt-5">
-      <section id="home" class="container text-center py-5">
+    <main class="pt-5 mt-5 ">
+      <section id="home" class="container text-center py-5 animate">
         <img src="./image/IMG_3707 copy.jpg" class="rounded-circle mb-3 profile-img" alt="Profile">
         <h1 class="fw-bold">Hi, I'm Pheakkdey</h1>
         <p style="font-weight: 500;font-size: 1.5rem;"> <strong style="font-style: oblique;">Full-stack Developer,</strong> constantly fueling my passion for learning. </p>
@@ -196,7 +216,7 @@
         </div>
       </section>
 
-      <section id="about" class=" px-4">
+      <section id="about" class=" px-4 animate">
         <div class="container">
             <h2 class="text-center fw-bold mb-4">About Me</h2>
             <div class="row row-cols-1">
@@ -216,7 +236,7 @@
          </div>
        
       </section>
-      <section id="projects" class=" py-5">
+      <section id="projects" class=" py-5 animate">
         <h2 class="text-center fw-bold mb-4">Projects</h2>
         <section class="container my-5">
           <div class="project-wrapper">
@@ -248,7 +268,7 @@
 
       </section>
 
-      <section class="container py-3">
+      <section class="container py-3 animate">
         <div class="project-wrapper">
           <div class="row align-items-center">
             <div class="col-lg-6 text-center mt-2 mt-lg-0">
@@ -276,7 +296,7 @@
 
       </section>
 
-      <section id="skill" class="section bg-white text-center">
+      <section id="skill" class="section bg-white text-center animate">
         <div class="container">
           <h2>Skills</h2>
           <div class="row justify-content-center">
@@ -302,7 +322,7 @@
         </div>
       </section>
 
-      <section id="experience" class="bg-white py-5">
+      <section id="experience" class="bg-white py-5 animate">
         <div class="container py-5">
            <h2 class="text-center">Experience</h2>
           <div class="timeline">
@@ -391,7 +411,7 @@
             </div>
           </div>
       </section>
-      <section id="contact" class="container py-5 text-center">
+      <section id="contact" class="container py-5 text-center animate">
         <h2 class="fw-bold mb-3">Contact Me</h2>
         <p>Email: <a href="mailto:contact@kdey6918.com">contact@kdey6918.com</a></p>
 
@@ -427,6 +447,16 @@
 
       window.addEventListener('load', arrangeTimeline);
       window.addEventListener('resize', arrangeTimeline);
+
+      
+
+      const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
 
     </script>
 
