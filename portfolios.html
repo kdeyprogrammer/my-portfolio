@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+
+    header {
+
+      color: white;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+     p{
+      font-size: 1.3rem;
+     }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .my-img {
+      width: 500px;
+    }
+    .info{
+       width: 800px;
+       margin-left: 350px;
+    }
+  
+    .project-wrapper {
+      height: 400px;
+      background: #f1f3f5;
+      border-radius: 1rem;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 2.5rem;
+    }
+
+    .project-image {
+      width: 520px;
+      border-radius: 0.75rem;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+
+    }
+
+    .description {
+      font-size: 20px;
+    }
+
+    .tech-badge {
+      background: #2b2b2b;
+      border-radius: 999px;
+      padding: 0.4rem 1rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+    }
+
+    .skill-btn {
+      margin: 10px;
+    }
+
+    .btn-multiple {
+      width: 700px;
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 2rem;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: #dee2e6;
+      transform: translateX(-50%);
+    }
+
+    .timeline-row {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin-bottom: 5rem;
+    }
+
+    .timeline-row.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .timeline-card {
+      width: 45%;
+    }
+
+    .timeline-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    .timeline-icon {
+      width: 60px;
+      height: 60px;
+      background: #fff;
+      border: 2px solid #dee2e6;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto;
+    }
+
+    .timeline-date-lg {
+      position: absolute;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: #6c757d;
+      white-space: nowrap;
+    }
+
+    .timeline-row.reverse .timeline-date-lg {
+      left: auto;
+      right: calc(100% + 200px);
+      text-align: right;
+    }
+
+    .timeline-row:not(.reverse) .timeline-date-lg {
+      left: calc(100% + 200px);
+      text-align: left;
+    }
+
+    @media (max-width: 991px) {
+      .timeline-date-lg {
+        position: static;
+        transform: none;
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        text-align: left !important;
+      }
+    }
+
+    .timeline-date {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+  </style>
+</head>
+
+  <body class="bg-light">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+              <li class="nav-item"><a href="#about" class="nav-link active">About </a></li>
+              <li class="nav-item"><a href="#projects" class="nav-link active">Projects</a></li>
+              <li class="nav-item"><a href="#experience" class="nav-link active">Experience</a></li>
+              <li class="nav-item"><a href="#contact" class="nav-link active">Contact</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="pt-5 mt-5">
+      <section id="home" class="container text-center py-5">
+        <img src="./image/IMG_3707 copy.jpg" class="rounded-circle mb-3 profile-img" alt="Profile">
+        <h1 class="fw-bold">Hi, I'm Pheakkdey</h1>
+        <p style="font-weight: 500;font-size: 1.5rem;"> <strong style="font-style: oblique;">Full-stack Developer,</strong> constantly fueling my passion for learning. </p>
+        <p style="font-weight: 500; font-size: 1.5rem;">I'm always on the lookout for new things to try.</p>
+
+        <div class="d-flex justify-content-center gap-3">
+          <a href="https://github.com/kdeyprogrammer" class="btn btn-outline-dark"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/pheakkdey-chekva-998599339/" class="btn btn-outline-primary"><i class="bi bi-linkedin"></i></a>
+          <a href="https://x.com/PheakK98363" class="btn btn-outline-info"><i class="bi bi-twitter"></i></a>
+        </div>
+      </section>
+
+      <section id="about" class=" px-4">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">About Me</h2>
+            <div class="row row-cols-1">
+              <div class="col d-flex justify-content-center">
+                <img src="./image/photo_2025-12-19_18-39-49.jpg" class="img-fluid rounded  my-img" alt="About">
+              </div>
+              
+            </div>
+         </div>
+         <div class="col-lg-6 mx-auto">
+
+           <p class=" mt-4">
+             I've been working as a full-stack developer for 2 years. During these time, I've worked 
+             on various fields such as frontend development with NextJS and Angular (legacy code),
+             backend development with Spring, Blockchain and Smart Contract with Solidity.
+           </p>
+         </div>
+       
+      </section>
+      <section id="projects" class=" py-5">
+        <h2 class="text-center fw-bold mb-4">Projects</h2>
+        <section class="container my-5">
+          <div class="project-wrapper">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                <h2 class="fw-bold mb-3">CamDL KYC Portal</h2>
+
+                <p class="text-secondary mb-4 description">
+                  CamDL Hybrid Permissioned Blockchain Registration Portal is a cutting-edge platform developed using
+                  Next.js and Chakra UI.
+                  The project incorporates the utilization of smart contracts written in Solidity.
+                </p>
+
+                <div class="d-flex gap-2 py-3">
+                  <span class="tech-badge text-white">REACT</span>
+                  <span class="tech-badge text-white">NEXT.JS</span>
+                  <span class="tech-badge text-white">PRISMA</span>
+                </div>
+              </div>
+              <div class="col-lg-6 text-center mt-2 mt-lg-0">
+                <img
+                  src="https://cdn.sanity.io/images/j493y206/production/a7b46e3202706de4fe25dd56fa2063bdabf424a5-1280x688.jpg"
+                  alt="CamDL KYC Portal" class="img-fluid project-image">
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+      <section class="container py-3">
+        <div class="project-wrapper">
+          <div class="row align-items-center">
+            <div class="col-lg-6 text-center mt-2 mt-lg-0">
+              <img
+                src="https://cdn.sanity.io/images/j493y206/production/a7b46e3202706de4fe25dd56fa2063bdabf424a5-1280x688.jpg"
+                alt="CamDL KYC Portal" class="img-fluid project-image">
+            </div>
+            <div class="col-lg-6">
+              <h2 class="fw-bold mb-3">Pheakkdey's Home Chores</h2>
+
+              <p class="text-secondary mb-4 description">
+                The First SvelteKit personal project is a web app that helps individuals manage and view their home
+                chores schedule. It integrates with Notion for easy data access and updates.
+              </p>
+
+              <div class="d-flex gap-2 py-3">
+                <span class="tech-badge text-white">SVELTEKIT</span>
+                <span class="tech-badge text-white">TAIlWINDCSS</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      </section>
+
+      <section id="skill" class="section bg-white text-center">
+        <div class="container">
+          <h2>Skills</h2>
+          <div class="row justify-content-center">
+            <div class="col d-flex justify-content-center mt-4">
+              <div class=" flex-wrap  btn-multiple">
+                <button class="btn btn-outline-secondary skill-btn"">React</button>
+          <button class=" btn btn-outline-secondary skill-btn">Next.js</button>
+                <button class="btn btn-outline-secondary skill-btn">Java</button>
+                <button class="btn btn-outline-secondary skill-btn">Solidity</button>
+                <button class="btn btn-outline-secondary skill-btn">Docker</button>
+                <button class="btn btn-outline-secondary skill-btn">MySQL</button>
+                <button class="btn btn-outline-secondary skill-btn">JavaScript</button>
+                <button class="btn btn-outline-secondary skill-btn">TypeScript</button>
+                <button class="btn btn-outline-secondary skill-btn">Angular</button>
+                <button class="btn btn-outline-secondary skill-btn">Node.js</button>
+                <button class="btn btn-outline-secondary skill-btn">Python</button>
+                <button class="btn btn-outline-secondary skill-btn">Spring</button>
+                <button class="btn btn-outline-secondary skill-btn">CSS</button>
+                <button class="btn btn-outline-secondary skill-btn">C#</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="bg-white py-5">
+        <div class="container py-5">
+           <h2 class="text-center">Experience</h2>
+          <div class="timeline">
+
+         
+            <div class="timeline-row">
+              <div class="timeline-card left">
+                <div class="card p-4 shadow-sm">
+                  <h5 class="fw-bold">IT Support</h5>
+                  <h6 class="text-muted">Metfone Headquarter</h6>
+                  <p class="mt-2 text-muted">
+                    Metfone Headquarter
+                    My first-ever job, both in life and in the tech field, was an invaluable experience for me. It
+                    served as a platform where I not only gained knowledge about various job aspects but also honed my
+                    programming skills during my free time working there.
+                  </p>
+                  <span class="vertical-timeline-element-date timeline-date-lg">
+                    Dec 2020 - Feb 2021
+                  </span>
+                </div>
+              </div>
+              <div class="timeline-center">
+                <div class="timeline-icon">
+                  <img
+                    src="https://cdn.sanity.io/images/j493y206/production/0375b4e52430ee7848f3b118e1d0385091a983cf-256x256.png"
+                    class="img-fluid rounded-circle" alt="IT Support" width="36" height="36">
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-row reverse">
+              <div class="timeline-card right">
+                <div class="card p-4 shadow-sm">
+                  <h5 class="fw-bold">Developer Internship</h5>
+                  <h6 class="text-muted">Techo Startup Center</h6>
+                  <p class="mt-2 text-muted">
+                    Techo Startup Center
+                    In my first developer role, I gained comprehensive knowledge and skills through hands-on experience.
+                    One notable project was creating a digital signature proof of concept. I developed both the backend
+                    and frontend components, refining my skills and gaining practical experience in building secure
+                    software.
+                  </p>
+                  <span class="vertical-timeline-element-date timeline-date-lg">
+                    Dec 2021 - Feb 2022
+                  </span>
+                </div>
+              </div>
+
+
+              <div class="timeline-center">
+                <div class="timeline-icon">
+                  <img
+                    src="https://cdn.sanity.io/images/j493y206/production/1b1113c1075a56b5daf551a29b07dbad5bfe18d2-256x256.png"
+                    class="img-fluid rounded-circle" alt="Internship" width="36" height="36">
+
+                </div>
+
+              </div>
+            </div>
+            <div class="timeline-row">
+              <div class="timeline-card left">
+                <div class="card p-4 shadow-sm">
+                  <h5 class="fw-bold">Full-stack Developer</h5>
+                  <h6 class="text-muted">Metfone Headquarter</h6>
+                  <p class="mt-2 text-muted">
+                    Techo Startup Center
+                    After a successful internship, I landed a full-stack developer job with diverse projects, including
+                    government initiatives. This role offered daily real-world challenges that enhanced my skills and
+                    knowledge. Working full-time as a developer fueled my professional growth and expertise in the
+                    field.
+                  </p>
+                  <span class="vertical-timeline-element-date timeline-date-lg">
+                    Mar 2022 -present
+                  </span>
+                </div>
+              </div>
+              <div class="timeline-center">
+                <div class="timeline-icon">
+                  <img
+                    src="https://cdn.sanity.io/images/j493y206/production/ec93946d465812f7d998bdbd05f9fbbba8adcd16-256x256.png"
+                    class="img-fluid rounded-circle" alt="Fullstack" width="36" height="36">
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+      </section>
+      <section id="contact" class="container py-5 text-center">
+        <h2 class="fw-bold mb-3">Contact Me</h2>
+        <p>Email: <a href="mailto:contact@kdey6918.com">contact@kdey6918.com</a></p>
+
+        <form class="mx-auto" style="max-width:500px">
+          <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+          <textarea class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+          <button class="btn btn-dark">Send Message</button>
+        </form>
+      </section>
+
+    </main>
+    <footer class="text-center py-3 bg-dark text-white">
+      <small>© 2025 Pheakkdey Checkva. All rights reserved.</small>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function arrangeTimeline() {
+        const rows = document.querySelectorAll('.timeline-row');
+
+        if (window.innerWidth >= 992) {
+          rows.forEach((row, index) => {
+            row.classList.remove('reverse');
+            if (index === 1) row.classList.add('reverse'); 
+          });
+        } else {
+          rows.forEach(row => row.classList.remove('reverse'));
+        }
+      }
+
+      window.addEventListener('load', arrangeTimeline);
+      window.addEventListener('resize', arrangeTimeline);
+
+    </script>
+
+</body>
+
+</html>
